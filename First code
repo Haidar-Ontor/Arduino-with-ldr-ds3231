@@ -14,6 +14,7 @@ void setup() {
   lcd.backlight();
   pinMode(LED, OUTPUT);
   pinMode(analog_IN, INPUT);
+  pinMode(LED, OUTPUT);
   Serial.begin(9600);  
 }
 
@@ -25,7 +26,13 @@ void loop() {
   lcd.setCursor(0,0);
   lcd.print("Light");
   lcd.setCursor(7,0);
-  lcd.print(Value);  
+  lcd.print(Value);
+  {
+  if(analogRead > 300){
+  digitalWrite(LED, HIGH);
+  else
+  digitalWrite(LED, LOW);
+  }
   delay(1000);
   
 }
