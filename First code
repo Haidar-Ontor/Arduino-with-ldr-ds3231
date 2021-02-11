@@ -20,12 +20,12 @@ void setup() {
 void loop() {
 
   int Value = analogRead(analog_IN);  
-  Serial.print("Analog read: ");Serial.println(Value);  
+  Serial.print("Light ");Serial.println(Value);  
   lcd.clear();
   lcd.setCursor(0,0);
-  lcd.print("  Analog  Read  ");
-  lcd.setCursor(0,1);
+  lcd.print("Light");
+  lcd.setCursor(7,0);
   lcd.print(Value);  
-  delay(100);
+  delay(1000);
   
 }
