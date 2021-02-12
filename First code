@@ -1,6 +1,3 @@
-// LDR sensor Test
-
-
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
 
@@ -27,5 +24,11 @@ void loop() {
   lcd.setCursor(7,0);
   lcd.print(Value);  
   delay(1000);
-  
+ { if(Value<=300)
+ digitalWrite(LED, HIGH);
+
+ else
+ digitalWrite(LED, LOW);
+ }
+ 
 }
